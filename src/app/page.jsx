@@ -47,6 +47,19 @@ export default async function Home() {
             <TopSevenLeaderboardUi players={data.allTimeTopPlayers} />
           </div>
         </div>
+        <div class="fixed -bottom-1 -right-1 max-w-44 flex items-center gap-2 p-3 bg-base-200 outline-2 outline-dashed outline-white/70 rounded-lg ">
+          <span>
+            <span class="text-sm text-base-content">By </span>
+            <a
+              href="https://twitter.com/muhd_durjoy"
+              class="link text-sm text-base-content font-medium"
+              target="_blank"
+            >
+              Md Durjoy
+            </a>
+          </span>
+          <img class="max-w-8 rounded-full" src="./pfp.jpeg" alt="durjoy" />
+        </div>
       </div>
     </>
   );

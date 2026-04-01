@@ -35,26 +35,26 @@ export default function page() {
         if (!document.fullscreenElement) {
           repeatedTaskHandler();
           setGameOverReason("Exited Fullscreen");
-          console.log("Fullscreen exited (Esc or F11 probably used)");
+          // console.log("Fullscreen exited (Esc or F11 probably used)");
         }
       };
 
       const handleMouseMove = () => {
         repeatedTaskHandler();
         setGameOverReason("Mouse Moved");
-        console.log("You moved the mouse! Game over.");
+        // console.log("You moved the mouse! Game over.");
       };
 
       const handleClick = () => {
         repeatedTaskHandler();
-        console.log("You clicked the mouse! Game over.");
+        // console.log("You clicked the mouse! Game over.");
         setGameOverReason("Mouse Clicked");
       };
 
       const handleKeyDown = (e) => {
         repeatedTaskHandler();
         setGameOverReason(`Key Pressed (${e.key})`);
-        console.log("pressed key:", e.key);
+        // console.log("pressed key:", e.key);
       };
 
       window.addEventListener("fullscreenchange", handleFullscreenChange);

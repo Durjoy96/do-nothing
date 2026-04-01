@@ -4,7 +4,6 @@ import React from "react";
 
 export default function LeaderboardTable({ data, leaderboardBtn }) {
   const timeSurvived = (totalSeconds) => {
-    console.log(totalSeconds);
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor(totalSeconds / 60) - hours * 60;
     const seconds = totalSeconds % 60;
