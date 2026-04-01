@@ -42,7 +42,7 @@ export default function LeaderboardTable({ data, leaderboardBtn }) {
                 <img
                   src={player.avatar}
                   alt={player.name}
-                  className="w-12 h-12 rounded-full "
+                  className="w-12 h-12 rounded-full bg-[#e8f5e9] border border-white/30"
                 />
                 <div className="text-left">
                   {player.username && (

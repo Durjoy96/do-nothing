@@ -3,6 +3,7 @@ import "./globals.css";
 import Provider from "@/lib/provider";
 import { Toaster } from "react-hot-toast";
 import NextTopLoader from "nextjs-toploader";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${fredoka.variable} antialiased min-h-screen`}
       >
+        <Analytics />
         <Provider>
           <NextTopLoader
             color="#ffb800"
