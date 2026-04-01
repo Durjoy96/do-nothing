@@ -4,8 +4,6 @@ import { useValue } from "@/lib/provider";
 import React, { useEffect, useState } from "react";
 import LeaderboardInputModal from "./leaderboard-input-modal";
 import { RotateCcw, Trophy } from "lucide-react";
-import LeaderboardTable from "./leaderboard-table";
-import Link from "next/link";
 import TopSevenLeaderboardUi from "./top-seven-leaderboard-ui";
 
 export default function GameOver() {
@@ -27,7 +25,7 @@ export default function GameOver() {
   //fetch top 7 player data
   useEffect(() => {
     if (!isGameOver) return;
-    fetch("/api/leaderboard/this-month?limit=7")
+    fetch("/api/leaderboard/all-time?limit=7")
       .then((res) => res.json())
       .then((data) => {
         setLeaderboardData(data);
@@ -78,7 +76,7 @@ export default function GameOver() {
       {!loading && (
         <div className="mb-12">
           <TopSevenLeaderboardUi
-            players={leaderboardData.thisMonthTopPlayers}
+            players={leaderboardData.allTimeTopPlayers}
             leaderboardBtn={true}
           />
         </div>

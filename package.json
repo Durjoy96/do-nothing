@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "daisyui": "^5.1.8",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.544.0",

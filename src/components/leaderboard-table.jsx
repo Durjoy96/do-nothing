@@ -3,6 +3,16 @@ import Link from "next/link";
 import React from "react";
 
 export default function LeaderboardTable({ data, leaderboardBtn }) {
+  const timeSurvived = (totalSeconds) => {
+    console.log(totalSeconds);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor(totalSeconds / 60) - hours * 60;
+    const seconds = totalSeconds % 60;
+    const formate = `${hours ? `${hours}h` : ""} ${
+      minutes ? `${minutes}min` : ""
+    } ${seconds ? `${seconds}sec` : ""}`;
+    return formate;
+  };
   return (
     <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
       <table className="table">
@@ -79,18 +89,7 @@ export default function LeaderboardTable({ data, leaderboardBtn }) {
                 </div>
               </td>
               <td className="text-base font-bold text-accent">
-                {/* hours */}
-                {Math.floor(player.totalSeconds / 3600)
-                  ? `${Math.floor(player.totalSeconds / 3600)}h`
-                  : ""}{" "}
-                {/* minutes */}
-                {Math.floor(player.totalSeconds / 60)
-                  ? `${Math.floor(player.totalSeconds / 60)}min`
-                  : ""}{" "}
-                {/* seconds */}
-                {Math.floor(player.totalSeconds % 60)
-                  ? `${Math.floor(player.totalSeconds % 60)}sec`
-                  : ""}
+                {timeSurvived(player.totalSeconds)}
               </td>
               <td>{player.gameOverReason}</td>
             </tr>

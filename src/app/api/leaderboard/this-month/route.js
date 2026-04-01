@@ -11,7 +11,7 @@ export async function GET(req) {
     const collection = db.collection("leaderboard");
 
     const today = new Date();
-    const startOfMonth = new Date(today.getFullYear(), today.getMonth, 1);
+    const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
 
     const thisMonthTopPlayers = await collection
       .find({ createdAt: { $gte: startOfMonth } })

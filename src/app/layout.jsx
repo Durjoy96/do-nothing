@@ -16,7 +16,7 @@ const fredoka = Fredoka({
 
 export const metadata = {
   title: {
-    default: "Do Nothing",
+    default: "Do Nothing Online Game",
     template: "%s | Do Nothing",
   },
   description: "The hardest game you’ll ever play… by doing nothing",
